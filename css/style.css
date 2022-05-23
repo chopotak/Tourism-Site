@@ -15,6 +15,11 @@ html, body {
   max-width: 960px;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
 .intro {
   min-height: 100vh;
   max-height: 1400px;
@@ -151,6 +156,169 @@ html, body {
   bottom: 133px;
 }
 
+.link {
+  width: 100%;
+  background-image: url(../img/bg1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.link__body {
+  margin: 0 auto;
+  width: 44%;
+  padding-top: 100px;
+  padding-bottom: 96px;
+}
+.link__body p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #b7b7b7;
+  max-width: 620px;
+  text-align: center;
+  font-size: 13px;
+}
+.link__button {
+  width: 174px;
+  height: 38px;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.link__button a {
+  margin-top: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 300;
+  color: #fff;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.link__button:hover {
+  background-color: #fff;
+}
+.link__button:hover a {
+  color: black;
+}
+
+.stats__title {
+  margin-top: 70px;
+  margin-bottom: 68px;
+}
+.stats__title h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+}
+.stats__text {
+  margin-bottom: 28px;
+}
+.stats__text h2 {
+  margin-bottom: 11px;
+  font-size: 30px;
+  font-weight: 300;
+}
+.stats__text p {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
+}
+.stats__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 127px;
+}
+.stats__block {
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+.stats__block span {
+  font-size: 28px;
+  line-height: 57px;
+  font-weight: 400;
+}
+.stats__block p {
+  margin-top: -15px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.video {
+  background-image: url(../img/bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.video__body {
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 116px;
+  padding-bottom: 101px;
+}
+.video__body p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #b7b7b7;
+  text-align: center;
+  font-size: 13px;
+  max-width: 620px;
+  margin: 0 auto;
+  margin-top: 22px;
+  margin-bottom: 85px;
+}
+.video__body iframe {
+  width: 780px;
+  height: 440px;
+}
+.video__button {
+  margin: 0 auto;
+  width: 174px;
+  height: 38px;
+  border: 1px solid #fff;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.video__button a {
+  margin-top: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 300;
+  color: #fff;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.video__button:hover {
+  background-color: #fff;
+}
+.video__button:hover a {
+  color: black;
+}
+.video__title {
+  margin-top: 112px;
+}
+.video__title h2 {
+  display: block;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 400;
+  color: #fff;
+}
+
 @media screen and (max-width: 1200px) {
   .intro__text {
     padding-top: 5%;
@@ -201,7 +369,7 @@ html, body {
     text-align: center;
     margin: 0 auto;
     max-width: 570px;
-    margin-top: 30%;
+    margin-top: 20%;
     font-family: Roboto;
   }
 
@@ -235,6 +403,22 @@ html, body {
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
     grid-area: 1/2/3/2;
+  }
+
+  .link__body {
+    width: 60%;
+  }
+
+  .stats__blocks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .video__body iframe {
+    width: 546px;
+    height: 308px;
   }
 }
 @media screen and (max-width: 605px) {
@@ -294,5 +478,10 @@ html, body {
   .gallery__photos-block2-1 img:nth-child(3) {
     width: 165px;
     height: 182, 25px;
+  }
+
+  .video__body iframe {
+    width: 330px;
+    height: 185px;
   }
 }
