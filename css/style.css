@@ -228,13 +228,29 @@ html, body {
   font-weight: 300;
 }
 .stats__blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1;
+  grid-template-rows: 1;
   margin-bottom: 127px;
+}
+.stats__blocks > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.stats__blocks > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+.stats__blocks > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.stats__blocks > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
 }
 .stats__block {
   height: 70px;
@@ -410,10 +426,20 @@ html, body {
   }
 
   .stats__blocks {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 2;
+    grid-template-rows: 2;
+  }
+
+  .stats__blocks > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .stats__blocks > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
   }
 
   .video__body iframe {
@@ -480,8 +506,56 @@ html, body {
     height: 182, 25px;
   }
 
+  .link__button {
+    width: 60%;
+  }
+  .link__button a {
+    margin-top: 7px;
+    font-size: 18px;
+  }
+  .link p {
+    line-height: 20px;
+    font-size: 10px;
+  }
+
+  .stats__blocks {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: 4;
+    grid-template-rows: 4;
+  }
+
+  .stats__blocks > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .stats__title h2 {
+    font-size: 25px;
+  }
+  .stats__text h2 {
+    font-size: 25px;
+  }
+  .stats__text p {
+    line-height: 20px;
+    font-size: 10px;
+  }
+
+  .video__body p {
+    width: 80%;
+    font-size: 10px;
+  }
   .video__body iframe {
     width: 330px;
     height: 185px;
+  }
+  .video__button {
+    width: 140px;
+  }
+  .video__button a {
+    margin-top: 7px;
+    font-size: 18px;
+  }
+  .video__title h2 {
+    font-size: 16px;
   }
 }
